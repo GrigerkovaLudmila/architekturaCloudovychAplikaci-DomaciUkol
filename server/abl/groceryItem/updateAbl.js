@@ -54,7 +54,7 @@ async function UpdateAbl(req, res) {
     if (item.expirationDate && new Date(item.expirationDate) < new Date()) {
       res.status(400).json({
         code: "expiredDate",
-        message: "Expiration date cannot be in the past",
+        message: "Expiration date cannot be today or in the past",
       });
       return;
     }
