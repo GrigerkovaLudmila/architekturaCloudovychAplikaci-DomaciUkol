@@ -11,7 +11,7 @@ const schema = {
   type: "object",
   properties: {
     id: { type: "string", minLength: 32, maxLength: 32 },
-    name: { type: "string", minLength: 1 },
+    name: { type: "string", minLength: 1, maxLength: 100 },
     categoryId: { type: "string", minLength: 32, maxLength: 32 },
     expirationDate: { type: "string", format: "date" },
     quantity: { type: "number", minimum: 0 },
